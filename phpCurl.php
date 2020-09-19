@@ -46,7 +46,7 @@
     curl_setopt($ch,CURLOPT_COOKIESESSION, true);
     curl_setopt ($ch,CURLOPT_REFERER, $url);
     curl_setopt ($ch,CURLOPT_POST, 1); 
-    curl_setopt ($ch,CURLOPT_POSTFIELDS, $postdata);
+    curl_setopt ($ch,CURLOPT_POSTFIELDS, http_build_query($postdata));
     curl_setopt($ch,CURLOPT_RETURNTRANSFER, 1);
     curl_setopt($ch,CURLOPT_FOLLOWLOCATION, 1);
     curl_setopt($ch,CURLOPT_COOKIEJAR, $cookie);
